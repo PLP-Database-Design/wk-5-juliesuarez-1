@@ -6,6 +6,7 @@
    | Juliet Nakawesi  | Test Manager  |
    | Maureen Muriithi | Test Executor |
    | Donie Golanda    | Risk Analyst  |
+
 2. ## **Test Plan**
 
 Objectives
@@ -15,7 +16,6 @@ Objectives
 - To document and report on test execution status, metrics, and team findings.
 
 ### Scope (In & Out)
-
 In Scope:
 - Functional testing of all game features.
 - Data integrity testing for localStorage (Leaderboard).
@@ -33,7 +33,8 @@ In Scope:
 ## Resources (Roles & Tools)
 - Team: 1 Test Manager, 1 Risk Analyst, 1 Test Executor.
 - System Under Test (SUT): index.html (local file).
-## Tools:
+
+## Tools
 - GitHub Repository: For version control of the report.
 - GitHub Issues: For defect tracking (mandatory).
 - Jira: For task management (Kanban board).
@@ -48,13 +49,13 @@ In Scope:
 | **Oct 24-25** | Morning   | Planning  | Draft Test Plan, Set up GitHub, Initial Risk Analysis,Create whatsapp group |
 |                       | Afternoon | Design    | Complete Risk Analysis, Design all Test Cases                               |
 |                       | Evening   | Execution | Begin executing test cases and logging initial defects.                     |
-| **Oct 25** | Morning   | Finalize  | Finish test execution, log all defects, monitor metrics.                    |
+| **Oct 25** | Morning  | Finalize  | Finish test execution, log all defects, monitor metrics.                    |
 |                       | Afternoon | Reporting | Gather all metrics, write team reflection.                                  |
 |                       | Evening   | Reporting | Assemble and review final `Group_Test_Management_Report.md`. and submit   |
 
 ## * Entry & Exit Criteria
 
-- Entry Criteria (To start testing):
+Entry Criteria (To start testing):
 - The index.html application is runnable in the test environment.
 - The Test Plan is reviewed and approved by all team members.
 - The initial Risk Analysis (Deliverable 3) is complete and prioritized.
@@ -88,13 +89,13 @@ In Scope:
 | R5 | UI freezes or lag occurs when restarting multiple times                   | 4                 | 6             | Low      | Optimize DOM updates; test reset cycles ≥10 times; monitor console for performance warnings       |
 | R6 | Player confusion due to unclear success/error messages                    | 5                 | 5             | Low      | Improve message text and color cues; conduct quick usability feedback test                        |
 
-### Risk Coverage Chart (Excel)
+7. ### Risk Coverage Chart (Excel)
 
 git
 Below is the visual summary of risk distribution created in Excel:
 --Risk Coverage Chart:(https://github.com/PLP-Database-Design/wk-5-juliesuarez-1/blob/main/risk_chart.jpg)
 
-**Test Design & Execution**
+8. **Test Design & Execution**
 
 | ID    | Feature     | Steps                                                                                 | Expected Result                                               | Actual Result                                | Risk Priority | Status<br />Pass/Fail |
 | ----- | ----------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------- | ------------- | --------------------- |
@@ -110,11 +111,11 @@ Below is the visual summary of risk distribution created in Excel:
 [BUG-03]: [https://github.com/PLP-Database-Design/wk-5-juliesuarez-1/issues/4]
 
 
-10. Test Monitoring & Metrics| Metric                  | Formula                             | Calculation | Result |
-    | ----------------------- | ----------------------------------- | ----------- | ------ |
+10. Test Monitoring & Metrics | Metric                             | Formula     | Calculation | Result |
+    | ----------------------- | -----------------------------------| ----------- | ------ |
     | Test Case Pass %        | (Passed / Total) × 100             |             |        |
-    | Defect Density          | Defects / Test Cases                |             |        |
-    | Risk Coverage Ratio     | (Tested Risks / Total Risks) × 100 | 5 / 6x100   | 83%    |
+    | Defect Density          | Defects / Test Cases               |             |        |
+    | Risk Coverage Ratio     | (Tested Risks / Total Risks) × 100 | (5 / 6)x100 | 83%    |
     | Regression Success Rate | (Passed / Total) × 100             |             |        |
 
 NOTE:  Regression Success Rate is for re-testing bugs after they are "fixed"
