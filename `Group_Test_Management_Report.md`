@@ -8,8 +8,7 @@
    | Donie Golanda    | Risk Analyst  |
 2. ## **Test Plan**
 
-   Objectives
-
+Objectives
 - To verify the functionality of the features: Reset Game, Leaderboard, and Bonus Round.
 - To identify and log at least 3 defects related to the features or game logic.
 - To manage the testing process using risk-based prioritization.
@@ -18,7 +17,6 @@
 ### Scope (In & Out)
 
 In Scope:
-
 - Functional testing of all game features.
 - Data integrity testing for localStorage (Leaderboard).
 - State management testing (Reset, Bonus tracking).
@@ -26,7 +24,6 @@ In Scope:
 - Defect reporting and re-testing of fixes.
 
 # Out of Scope:
-
 - Cross-browser testing (testing is restricted to the specified environment).
 - Performance, load, or stress testing.
 - Code-level unit testing or white-box testing.
@@ -34,10 +31,9 @@ In Scope:
 - Mobile device responsiveness testing.
 
 ## Resources (Roles & Tools)
-
 - Team: 1 Test Manager, 1 Risk Analyst, 1 Test Executor.
 - System Under Test (SUT): index.html (local file).
-  Tools:
+## Tools:
 - GitHub Repository: For version control of the report.
 - GitHub Issues: For defect tracking (mandatory).
 - Jira: For task management (Kanban board).
@@ -88,15 +84,15 @@ In Scope:
 | R1 | 'Reset Game' button fails to clear game state or scores                   | 6                 | 9             | Medium   | Re-check state management logic; re-test after each change to reset function                      |
 | R2 | 'Leaderboard' fails to save or display scores correctly from localStorage | 8                 | 10            | High     | Implement consistent localStorage key usage; clear cache before tests; re-test with boundary data |
 | R3 | 'Bonus Round' points not calculated or added to total correctly           | 7                 | 8             | Medium   | Recheck the arithmetic logic; add unit test for bonus formula; verify updates after each round    |
-| R4 | 'Leaderboard' data lost when browser cache is cleared                     | 5                 | 7             | Medium   | Document expected behavior; add “Save/Export” option for users if feasible                      |
-| R5 | UI freezes or lag occurs when restarting multiple times                   | 4                 | 6             | Low      | Optimize DOM updates; test reset cycles ≥10 times; monitor console for performance warnings      |
+| R4 | 'Leaderboard' data lost when browser cache is cleared                     | 5                 | 7             | Medium   | Document expected behavior; add “Save/Export” option for users if feasible                        |
+| R5 | UI freezes or lag occurs when restarting multiple times                   | 4                 | 6             | Low      | Optimize DOM updates; test reset cycles ≥10 times; monitor console for performance warnings       |
 | R6 | Player confusion due to unclear success/error messages                    | 5                 | 5             | Low      | Improve message text and color cues; conduct quick usability feedback test                        |
 
 ### Risk Coverage Chart (Excel)
 
 git
 Below is the visual summary of risk distribution created in Excel:
---Risk Coverage Chart:(https://github.com/juliesuarez/Debug-dynasty/blob/main/risk_chart.jpg)
+--Risk Coverage Chart:(https://github.com/PLP-Database-Design/wk-5-juliesuarez-1/blob/main/risk_chart.jpg)
 
 **Test Design & Execution**
 
@@ -104,7 +100,7 @@ Below is the visual summary of risk distribution created in Excel:
 | ----- | ----------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------- | ------------- | --------------------- |
 | TC-01 | Reset Game  | 1. Start new game<br />2. Play two rounds<br />3. Click Reset button                  | Score and progress reset to zero; new game starts cleanly.    | Works as expected                            | Medium (R1)   | pass                  |
 | TC-02 | UI Feedback | 1. Enter incorrect word repeatedly.<br />2. Observe feedback message or color change. | User receives clear “Try Again” message in red              | Message unclear, color same as background    | Low (R6)      | Fail                  |
-| TC-03 | Bonus Round | 1. Play three complete puzzles<br />2. Observe bonus round activation.              | Bonus round activates automatically; score doubles correctly. | Bonus round triggered but score not doubled. | Medium (R3)   | Fail                  |
+| TC-03 | Bonus Round | 1. Play three complete puzzles<br />2. Observe bonus round activation.                | Bonus round activates automatically; score doubles correctly. | Bonus round triggered but score not doubled. | Medium (R3)   | Fail                  |
 
 **9. Defect Reporting**
 
@@ -127,7 +123,7 @@ NOTE:  Regression Success Rate is for re-testing bugs after they are "fixed"
 
 11.1 Impact of Risk Analysis
 ------------------------------------------------------------------------------------------------------------------------
-  The Risk Analysis helped our team focus on the most critical areas first. Since the Leaderboard was rated High Priority and had the highest risk impact, we spent extra time testing and fixing it to make sure scores saved and displayed correctly. We also gave attention to the Bonus Round, but since its risks were Medium Priority, it came after the Leaderboard. Overall, the analysis guided us to manage time better and reduce issues in key features.
+The Risk Analysis helped our team focus on the most critical areas first. Since the Leaderboard was rated High Priority and had the highest risk impact, we spent extra time testing and fixing it to make sure scores saved and displayed correctly. We also gave attention to the Bonus Round, but since its risks were Medium Priority, it came after the Leaderboard. Overall, the analysis guided us to manage time better and reduce issues in key features.
 
 11.2. Testing Trade-offs (Coverage, Time, Depth)
 --------------------------------------------------------------------------------------------------------------------------------------------------
